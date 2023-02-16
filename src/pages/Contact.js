@@ -17,66 +17,30 @@ const Contact = () => {
             </li>
             <li>
               <i className="fas fa-mobile-alt"></i>
-              <CopyToClipboard text="0123456789">
+              <CopyToClipboard text="0782535994">
                 <span
                   className="clickInput"
                   onClick={() => {
                     alert("Numéro copié !");
                   }}
                 >
-                  01 23 45 67 89
+                  07 82 53 59 94
                 </span>
               </CopyToClipboard>
             </li>
             <li>
               <i className="far fa-envelope"></i>
-              <CopyToClipboard text="mail@gmail.fr">
+              <CopyToClipboard text="brown.florian08@gmail.fr">
                 <span
                   className="clickInput"
                   onClick={() => {
                     alert("Adresse mail copié !");
                   }}
                 >
-                  mail@gmail.fr
+                  brown.florian08@gmail.fr
                 </span>
               </CopyToClipboard>
             </li>
-          </ul>
-        </div>
-        <div className="socialNetwork">
-          <ul>
-            <a
-              href="https://www.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h4>Linkedin</h4>
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a
-              href="https://www.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h4>Github</h4>
-              <i className="fab fa-github"></i>
-            </a>
-            <a
-              href="https://www.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h4>Twitter</h4>
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a
-              href="https://www.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h4>Codepen</h4>
-              <i className="fab fa-codepen"></i>
-            </a>
           </ul>
         </div>
       </div>

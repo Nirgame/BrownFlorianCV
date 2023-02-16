@@ -13,6 +13,7 @@ export default class ProjectList extends Component {
       { id: 5, value: "flutter" },
       { id: 6, value: "java" },
       { id: 7, value: "figma" },
+      { id: 8, value: "mysql" },
     ],
     selectedRadio: "all",
   };

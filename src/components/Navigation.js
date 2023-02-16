@@ -44,16 +44,7 @@ const Navigation = () => {
         <ul>
           <li>
             <a
-              href="https://www.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-linkedin"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.google.com"
+              href="https://github.com/Nirgame"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -62,20 +53,11 @@ const Navigation = () => {
           </li>
           <li>
             <a
-              href="https://www.google.com"
+              href="http://brown-florian.alwaysdata.net/vue/Page.php"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-codepen"></i>
+              <i className="fas fa-desktop"></i>
             </a>
           </li>
         </ul>
