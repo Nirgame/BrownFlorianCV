@@ -17,27 +17,27 @@ const Contact = () => {
             </li>
             <li>
               <i className="fas fa-mobile-alt"></i>
-              <CopyToClipboard text="0782535994">
+              <CopyToClipboard text="0123456789">
                 <span
                   className="clickInput"
                   onClick={() => {
                     alert("Numéro copié !");
                   }}
                 >
-                  07 82 53 59 94
+                  01 23 45 67 89
                 </span>
               </CopyToClipboard>
             </li>
             <li>
               <i className="far fa-envelope"></i>
-              <CopyToClipboard text="brown.florian08@gmail.fr">
+              <CopyToClipboard text="mail@gmail.fr">
                 <span
                   className="clickInput"
                   onClick={() => {
                     alert("Adresse mail copié !");
                   }}
                 >
-                  brown.florian08@gmail.fr
+                  mail@gmail.fr
                 </span>
               </CopyToClipboard>
             </li>
