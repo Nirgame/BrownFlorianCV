@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import AuthContext from "../AuthContext";
+import firebase from "firebase/compat/app";
 
 const Navigation = () => {
+  const { isConnected, setIsConnected, user } = useContext(AuthContext);
+
+  function logout() {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        setIsConnected(false);
+      })
+      .catch((error) => {
+        // Une erreur s'est produite lors de la déconnexion
+      });
+  }
+
   return (
     <div className="sidebar">
       <div className="id">
@@ -37,6 +53,26 @@ const Navigation = () => {
               <span>Contact</span>
             </NavLink>
           </li>
+          {isConnected ? (
+            <li>
+              <NavLink
+                exact
+                to="/"
+                activeClassName="navActive"
+                onClick={logout}
+              >
+                <i className="fas fa-user"></i>
+                <span>Déconnexion</span>
+              </NavLink>
+            </li>
+          ) : (
+            <li>
+              <NavLink exact to="/login" activeClassName="navActive">
+                <i className="fas fa-user"></i>
+                <span>Connexion</span>
+              </NavLink>
+            </li>
+          )}
         </ul>
       </div>
 
