@@ -1,7 +1,10 @@
 import React from "react";
 import Navigation from "../components/Navigation";
+import { getStorage, ref } from "firebase/storage";
 
 const Home = () => {
+  const storage = getStorage();
+  const CVRef = ref(storage, "CV brown florian.pdf");
   return (
     <div className="home">
       <Navigation />
@@ -10,7 +13,10 @@ const Home = () => {
           <h1>Brown Florian</h1>
           <h2>Développeur Back-end</h2>
           <div className="pdf">
-            <a href="./media/CV.pdf" target="_blank">
+            <a
+              href="gs://brownfloriancv-e70ad.appspot.com/CV brown florian.pdf"
+              target="_blank"
+            >
               Télécharger CV
             </a>
           </div>
