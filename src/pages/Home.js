@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import Navigation from "../components/Navigation";
 
 const Home = () => {
@@ -11,7 +10,10 @@ const Home = () => {
           <h1>Brown Florian</h1>
           <h2>Développeur Back-end</h2>
           <div className="pdf">
-            <a href="./media/CV.pdf" target="_blank">
+            <a
+              href="https://firebasestorage.googleapis.com/v0/b/brownfloriancv-e70ad.appspot.com/o/CV%20brown%20florian.pdf?alt=media&token=7822d2ac-c745-469a-a32e-33a2fefd9f8e"
+              target="_blank"
+            >
               Télécharger CV
             </a>
           </div>

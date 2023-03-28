@@ -5,7 +5,7 @@ import firebase from "firebase/compat/app";
 import AuthContext from "../AuthContext";
 
 const Auth = (props) => {
-  const { setIsConnected } = useContext(AuthContext); // récupérez setIsConnected depuis le contexte
+  const { setIsConnected, setCurrentUser } = useContext(AuthContext); // récupérez setIsConnected depuis le contexte
 
   useEffect(() => {
     const ui =
@@ -15,19 +15,20 @@ const Auth = (props) => {
       signInOptions: [
         {
           provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-          //provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID
           requireDisplayName: false,
         },
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
       ],
       signInSuccessUrl: "/",
       callbacks: {
         signInSuccessWithAuthResult: (authResult) => {
           setIsConnected(true); // mettez à jour l'état isConnected en true
+          setCurrentUser(authResult.user.email); // mettez à jour l'utilisateur actuel avec l'adresse e-mail de l'utilisateur connecté
           return false; // redirigez manuellement l'utilisateur
         },
       },
     });
-  }, [props.auth]);
+  }, [props.auth, setCurrentUser, setIsConnected]);
   return (
     <>
       <div className={"firebase-auth-container"}></div>
