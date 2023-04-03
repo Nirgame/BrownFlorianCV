@@ -1,13 +1,10 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import Auth from "./Auth";
 import firebase from "firebase/compat/app";
 import { onAuthStateChanged } from "firebase/auth";
 import Home from "./Home";
-import AuthContext from "../AuthContext";
 
 const Login = () => {
-  const { setCurrentUser } = useContext(AuthContext);
-
   const firebaseConfig = {
     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
     authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,

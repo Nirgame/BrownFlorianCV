@@ -8,6 +8,7 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import AuthContext from "./AuthContext";
+import "./firebase-messaging-sw";
 
 const App = () => {
   const [isConnected, setIsConnected] = useState(false);
